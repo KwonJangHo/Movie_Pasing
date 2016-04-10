@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="홈으로"
+            android:id="@+id/button8"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onClick_0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="영화관 사이트 이동"
+            android:onClick="onClick_01" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="장르별 영화"
+            android:onClick="onClick_02"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="예매 순위"
+            android:onClick="onClick_03" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="18dp"
+            android:text="평점 순위"
+            android:onClick="onClick_04"
+            android:nestedScrollingEnabled="true" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.02">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CGV"
+                android:layout_marginTop="30dp"
+                android:id="@+id/button9"
+                android:textSize="20dp"
+                android:onClick="onClick_cgv"
+                android:nestedScrollingEnabled="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메가박스"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:id="@+id/button10"
+                android:onClick="onClick_megabox"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="롯데 시네마"
+                android:textSize="20dp"
+                android:id="@+id/button11"
+                android:layout_marginTop="30dp"
+                android:onClick="onClick_lotte"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/scrollView"
+                android:layout_below="@+id/textView7">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textView5"
+                    android:layout_alignEnd="@+id/button11"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/button9" />
+            </ScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="     "
+                android:id="@+id/textView6"
+                android:layout_marginTop="110dp"
+                android:layout_below="@+id/button10"
+                android:layout_toStartOf="@+id/button11" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="개봉 영화 리뷰\n"
+                android:id="@+id/textView7"
+                android:layout_alignBottom="@+id/textView6"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

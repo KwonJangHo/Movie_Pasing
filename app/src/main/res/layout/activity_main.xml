@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="홈으로"
+            android:id="@+id/button8"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onClick_0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="영화관 사이트 이동"
+            android:onClick="onClick_01" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="장르별 영화"
+            android:onClick="onClick_02"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20dp"
+            android:text="예매 순위"
+            android:onClick="onClick_03" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="18dp"
+            android:text="평점 순위"
+            android:onClick="onClick_04"
+            android:nestedScrollingEnabled="true" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.94">
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:hint="enter text to search"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/edit"
+                android:layout_marginLeft="10dp"
+                android:layout_toStartOf="@+id/main_button"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="search"
+                android:id="@+id/main_button"
+                android:layout_alignBottom="@+id/edit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:onClick="main_search"/>
+
+            <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceLarge"
+                  android:text="\n\n\n\t\t\t\t             영화를 검색하면 정보가 뜹니다.\n\n\n"
+                  android:id="@+id/main_textview"
+                  android:onClick="main_textview"
+                  android:layout_marginLeft="20dp"
+                  android:textSize="22dp"
+                  android:layout_marginRight="20dp"
+                android:layout_below="@+id/edit"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/main_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="\n최근 개봉한 영화들"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/main_textview"
+                android:layout_centerHorizontal="true" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/main_button"
+            android:layout_below="@+id/textView3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentBottom="true"
+                android:layout_alignEnd="@+id/main_button"
+                android:layout_alignStart="@+id/edit" />
+        </ScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
